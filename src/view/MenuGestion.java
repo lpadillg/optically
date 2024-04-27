@@ -1,6 +1,8 @@
 package view;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Font;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -281,15 +283,30 @@ public class MenuGestion extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lvenderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lvenderMouseClicked
-        // TODO add your handling code here:
+        Venta gestion = new Venta();
+        MenuPrincipal.panelcuerpo.removeAll();
+        MenuPrincipal.panelcuerpo.add(gestion, BorderLayout.CENTER);
+        MenuPrincipal.panelcuerpo.revalidate();
+        MenuPrincipal.panelcuerpo.repaint();
+        
+        VentaDetalleProducto ventadetalle = new VentaDetalleProducto();
+        Venta.panelDetalleVenta.removeAll();
+        Venta.panelDetalleVenta.add(ventadetalle, BorderLayout.CENTER);
+        Venta.panelDetalleVenta.revalidate();
+        Venta.panelDetalleVenta.repaint();
     }//GEN-LAST:event_lvenderMouseClicked
 
     private void lvenderMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lvenderMouseEntered
         lvender.setBackground(blue);
+        //lvender.setForeground(Color.white);
+        //lvender.setFont(new Font("Roboto Light", Font.BOLD, 11));
     }//GEN-LAST:event_lvenderMouseEntered
 
     private void lvenderMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lvenderMouseExited
         lvender.setBackground(bluelight);
+        //lvender.setForeground(Color.BLACK);
+        //lvender.setFont(new Font("Roboto Light", Font.PLAIN, 11));
+        
     }//GEN-LAST:event_lvenderMouseExited
 
     private void lbuscarventaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbuscarventaMouseEntered

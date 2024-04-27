@@ -29,6 +29,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         menu2 = new view.Menu();
         panelMenu = new javax.swing.JPanel();
         menuGestion1 = new view.MenuGestion();
+        panelcuerpo = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1390, 800));
@@ -53,12 +54,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jPanel1.add(panelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 1390, 100));
 
+        panelcuerpo.setBackground(new java.awt.Color(233, 241, 250));
+        panelcuerpo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        panelcuerpo.setOpaque(false);
+        panelcuerpo.setLayout(new java.awt.CardLayout());
+        jPanel1.add(panelcuerpo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 1390, 630));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(5, 5, 5)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1390, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -117,5 +124,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private view.Menu menu2;
     private view.MenuGestion menuGestion1;
     public static javax.swing.JPanel panelMenu;
+    public static javax.swing.JPanel panelcuerpo;
     // End of variables declaration//GEN-END:variables
 }

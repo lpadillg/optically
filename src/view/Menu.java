@@ -1,16 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package view;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
 
-/**
- *
- * @author luisa
- */
 public class Menu extends javax.swing.JPanel {
     Color blue  =  new Color(0,171,228);
     Color bluelight = new Color(233,241,250);
@@ -19,9 +12,6 @@ public class Menu extends javax.swing.JPanel {
     
     
 
-    /**
-     * Creates new form Menu
-     */
     public Menu() {
         initComponents();
         lgestion.setBackground(blue);

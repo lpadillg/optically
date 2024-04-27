@@ -1,5 +1,7 @@
 package view;
 
+import java.awt.Color;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
@@ -10,6 +12,8 @@ package view;
  * @author luisa
  */
 public class MenuGestion extends javax.swing.JPanel {
+    Color blue  =  new Color(0,171,228);
+    Color bluelight = new Color(233,241,250);
 
     /**
      * Creates new form MenuGestion
@@ -32,18 +36,18 @@ public class MenuGestion extends javax.swing.JPanel {
         jMenuItem1 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         lvender = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        lcobrosventa = new javax.swing.JLabel();
+        lcotizacion = new javax.swing.JLabel();
+        lnotasAnulacion = new javax.swing.JLabel();
+        lfacturacion = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel8 = new javax.swing.JLabel();
+        lbuscarventa = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        jLabel9 = new javax.swing.JLabel();
+        buscarreceta = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        lcliente = new javax.swing.JLabel();
+        laperturacaja = new javax.swing.JLabel();
+        lcierrecaja = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
 
         jMenuItem1.setText("jMenuItem1");
@@ -57,112 +61,205 @@ public class MenuGestion extends javax.swing.JPanel {
         jPanel1.setPreferredSize(new java.awt.Dimension(1390, 100));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lvender.setBackground(new java.awt.Color(255, 255, 255));
+        lvender.setBackground(new java.awt.Color(233, 241, 250));
         lvender.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
         lvender.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lvender.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-cash-38.png"))); // NOI18N
         lvender.setText("<html><center>Nueva Venta</center></html>");
         lvender.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lvender.setOpaque(true);
         lvender.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        lvender.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lvenderMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lvenderMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lvenderMouseExited(evt);
+            }
+        });
         jPanel1.add(lvender, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 90));
 
-        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-coins-38.png"))); // NOI18N
-        jLabel5.setText("<html><center>Cobros de Ventas</center></html>");
-        jLabel5.setToolTipText("");
-        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 0, 70, 90));
+        lcobrosventa.setBackground(new java.awt.Color(233, 241, 250));
+        lcobrosventa.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
+        lcobrosventa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lcobrosventa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-coins-38.png"))); // NOI18N
+        lcobrosventa.setText("<html><center>Cobros de Ventas</center></html>");
+        lcobrosventa.setToolTipText("");
+        lcobrosventa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lcobrosventa.setOpaque(true);
+        lcobrosventa.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        lcobrosventa.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lcobrosventaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lcobrosventaMouseExited(evt);
+            }
+        });
+        jPanel1.add(lcobrosventa, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 0, 70, 90));
 
-        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cotizacion.png"))); // NOI18N
-        jLabel6.setText("Cotización");
-        jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 60, 90));
+        lcotizacion.setBackground(new java.awt.Color(233, 241, 250));
+        lcotizacion.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
+        lcotizacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lcotizacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cotizacion.png"))); // NOI18N
+        lcotizacion.setText("Cotización");
+        lcotizacion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lcotizacion.setOpaque(true);
+        lcotizacion.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        lcotizacion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lcotizacionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lcotizacionMouseExited(evt);
+            }
+        });
+        jPanel1.add(lcotizacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 60, 90));
 
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/nota anulacion.png"))); // NOI18N
-        jLabel2.setText("<html><center>Notas de Anulación</center></html>");
-        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 60, 90));
+        lnotasAnulacion.setBackground(new java.awt.Color(233, 241, 250));
+        lnotasAnulacion.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
+        lnotasAnulacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lnotasAnulacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/nota anulacion.png"))); // NOI18N
+        lnotasAnulacion.setText("<html><center>Notas de Anulación</center></html>");
+        lnotasAnulacion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lnotasAnulacion.setOpaque(true);
+        lnotasAnulacion.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        lnotasAnulacion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lnotasAnulacionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lnotasAnulacionMouseExited(evt);
+            }
+        });
+        jPanel1.add(lnotasAnulacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 60, 90));
 
-        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel7.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/factura.png"))); // NOI18N
-        jLabel7.setText("<html><center>Facturación de Ventas</center></html>");
-        jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 80, 90));
+        lfacturacion.setBackground(new java.awt.Color(233, 241, 250));
+        lfacturacion.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
+        lfacturacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/factura.png"))); // NOI18N
+        lfacturacion.setText("<html><center>Facturación de Ventas</center></html>");
+        lfacturacion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lfacturacion.setOpaque(true);
+        lfacturacion.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        lfacturacion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lfacturacionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lfacturacionMouseExited(evt);
+            }
+        });
+        jPanel1.add(lfacturacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 80, 90));
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator1.setAlignmentX(0.0F);
         jSeparator1.setAlignmentY(0.0F);
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 0, 10, 99));
 
-        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/look.png"))); // NOI18N
-        jLabel8.setText("<html><center>Buscar Venta</center></html>");
-        jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel8.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 60, 90));
+        lbuscarventa.setBackground(new java.awt.Color(233, 241, 250));
+        lbuscarventa.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
+        lbuscarventa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/look.png"))); // NOI18N
+        lbuscarventa.setText("<html><center>Buscar Venta</center></html>");
+        lbuscarventa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lbuscarventa.setOpaque(true);
+        lbuscarventa.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        lbuscarventa.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbuscarventaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbuscarventaMouseExited(evt);
+            }
+        });
+        jPanel1.add(lbuscarventa, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 60, 90));
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator2.setAlignmentX(0.0F);
         jSeparator2.setAlignmentY(0.0F);
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 10, 99));
 
-        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/look.png"))); // NOI18N
-        jLabel9.setText("<html><center>Buscar Prescripciones</center></html>");
-        jLabel9.setToolTipText("");
-        jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel9.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 80, 90));
+        buscarreceta.setBackground(new java.awt.Color(233, 241, 250));
+        buscarreceta.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
+        buscarreceta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/look.png"))); // NOI18N
+        buscarreceta.setText("<html><center>Buscar Prescripciones</center></html>");
+        buscarreceta.setToolTipText("");
+        buscarreceta.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buscarreceta.setOpaque(true);
+        buscarreceta.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        buscarreceta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                buscarrecetaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                buscarrecetaMouseExited(evt);
+            }
+        });
+        jPanel1.add(buscarreceta, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 80, 90));
 
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator3.setAlignmentX(0.0F);
         jSeparator3.setAlignmentY(0.0F);
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 10, 99));
 
-        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel10.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-people-38.png"))); // NOI18N
-        jLabel10.setText("<html><center>Clientes</center></html>");
-        jLabel10.setToolTipText("");
-        jLabel10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel10.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 60, 90));
+        lcliente.setBackground(new java.awt.Color(233, 241, 250));
+        lcliente.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
+        lcliente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lcliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-people-38.png"))); // NOI18N
+        lcliente.setText("<html><center>Clientes</center></html>");
+        lcliente.setToolTipText("");
+        lcliente.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lcliente.setOpaque(true);
+        lcliente.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        lcliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lclienteMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lclienteMouseExited(evt);
+            }
+        });
+        jPanel1.add(lcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 60, 90));
 
-        jLabel11.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel11.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-receive-cash-38.png"))); // NOI18N
-        jLabel11.setText("<html><center>Apertura</center></html>");
-        jLabel11.setToolTipText("");
-        jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel11.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 0, 60, 90));
+        laperturacaja.setBackground(new java.awt.Color(233, 241, 250));
+        laperturacaja.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
+        laperturacaja.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        laperturacaja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-receive-cash-38.png"))); // NOI18N
+        laperturacaja.setText("<html><center>Apertura</center></html>");
+        laperturacaja.setToolTipText("");
+        laperturacaja.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        laperturacaja.setOpaque(true);
+        laperturacaja.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        laperturacaja.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                laperturacajaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                laperturacajaMouseExited(evt);
+            }
+        });
+        jPanel1.add(laperturacaja, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 0, 60, 90));
 
-        jLabel12.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel12.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-lock-38.png"))); // NOI18N
-        jLabel12.setText("<html><center>Cierre</center></html>");
-        jLabel12.setToolTipText("");
-        jLabel12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel12.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 0, 60, 90));
+        lcierrecaja.setBackground(new java.awt.Color(233, 241, 250));
+        lcierrecaja.setFont(new java.awt.Font("Roboto Light", 0, 11)); // NOI18N
+        lcierrecaja.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lcierrecaja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-lock-38.png"))); // NOI18N
+        lcierrecaja.setText("<html><center>Cierre</center></html>");
+        lcierrecaja.setToolTipText("");
+        lcierrecaja.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lcierrecaja.setOpaque(true);
+        lcierrecaja.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        lcierrecaja.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lcierrecajaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lcierrecajaMouseExited(evt);
+            }
+        });
+        jPanel1.add(lcierrecaja, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 0, 60, 90));
 
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator4.setAlignmentX(0.0F);
@@ -183,23 +280,107 @@ public class MenuGestion extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void lvenderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lvenderMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lvenderMouseClicked
+
+    private void lvenderMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lvenderMouseEntered
+        lvender.setBackground(blue);
+    }//GEN-LAST:event_lvenderMouseEntered
+
+    private void lvenderMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lvenderMouseExited
+        lvender.setBackground(bluelight);
+    }//GEN-LAST:event_lvenderMouseExited
+
+    private void lbuscarventaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbuscarventaMouseEntered
+        lbuscarventa.setBackground(blue);
+    }//GEN-LAST:event_lbuscarventaMouseEntered
+
+    private void lbuscarventaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbuscarventaMouseExited
+        lbuscarventa.setBackground(bluelight);
+    }//GEN-LAST:event_lbuscarventaMouseExited
+
+    private void lfacturacionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lfacturacionMouseEntered
+        lfacturacion.setBackground(blue);
+    }//GEN-LAST:event_lfacturacionMouseEntered
+
+    private void lfacturacionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lfacturacionMouseExited
+        lfacturacion.setBackground(bluelight);
+    }//GEN-LAST:event_lfacturacionMouseExited
+
+    private void lcotizacionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lcotizacionMouseEntered
+        lcotizacion.setBackground(blue);
+    }//GEN-LAST:event_lcotizacionMouseEntered
+
+    private void lcotizacionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lcotizacionMouseExited
+        lcotizacion.setBackground(bluelight);
+    }//GEN-LAST:event_lcotizacionMouseExited
+
+    private void lnotasAnulacionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lnotasAnulacionMouseEntered
+        lnotasAnulacion.setBackground(blue);
+    }//GEN-LAST:event_lnotasAnulacionMouseEntered
+
+    private void lnotasAnulacionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lnotasAnulacionMouseExited
+        lnotasAnulacion.setBackground(bluelight);
+    }//GEN-LAST:event_lnotasAnulacionMouseExited
+
+    private void buscarrecetaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscarrecetaMouseEntered
+        buscarreceta.setBackground(blue);
+    }//GEN-LAST:event_buscarrecetaMouseEntered
+
+    private void buscarrecetaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscarrecetaMouseExited
+        buscarreceta.setBackground(bluelight);
+    }//GEN-LAST:event_buscarrecetaMouseExited
+
+    private void lclienteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lclienteMouseEntered
+        lcliente.setBackground(blue);
+    }//GEN-LAST:event_lclienteMouseEntered
+
+    private void lclienteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lclienteMouseExited
+        lcliente.setBackground(bluelight);
+    }//GEN-LAST:event_lclienteMouseExited
+
+    private void laperturacajaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laperturacajaMouseEntered
+        laperturacaja.setBackground(blue);
+    }//GEN-LAST:event_laperturacajaMouseEntered
+
+    private void laperturacajaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_laperturacajaMouseExited
+        laperturacaja.setBackground(bluelight);
+    }//GEN-LAST:event_laperturacajaMouseExited
+
+    private void lcierrecajaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lcierrecajaMouseEntered
+        lcierrecaja.setBackground(blue);
+    }//GEN-LAST:event_lcierrecajaMouseEntered
+
+    private void lcierrecajaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lcierrecajaMouseExited
+        lcierrecaja.setBackground(bluelight);
+    }//GEN-LAST:event_lcierrecajaMouseExited
+
+    private void lcobrosventaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lcobrosventaMouseEntered
+        lcobrosventa.setBackground(blue);
+    }//GEN-LAST:event_lcobrosventaMouseEntered
+
+    private void lcobrosventaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lcobrosventaMouseExited
+        lcobrosventa.setBackground(bluelight);
+    }//GEN-LAST:event_lcobrosventaMouseExited
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel buscarreceta;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JLabel laperturacaja;
+    private javax.swing.JLabel lbuscarventa;
+    private javax.swing.JLabel lcierrecaja;
+    private javax.swing.JLabel lcliente;
+    private javax.swing.JLabel lcobrosventa;
+    private javax.swing.JLabel lcotizacion;
+    private javax.swing.JLabel lfacturacion;
+    private javax.swing.JLabel lnotasAnulacion;
     private javax.swing.JLabel lvender;
     // End of variables declaration//GEN-END:variables
 }
